@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-// Top level function to keep the code clean by putting body widgets.
-Widget helloRectangle() {
-  return Container(
-    color: Colors.cyanAccent,
-  );
+// Old: Top level function to keep the code clean by putting body widgets.
+// Inheriting from StatelessWidget for added functionality.
+class HelloRectangle extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.cyanAccent,
+    );
+  }
 }
 
 void main() {
@@ -18,7 +23,7 @@ void main() {
         appBar: AppBar(
           title: Text("Hello Rectangle"),
         ),
-        body: helloRectangle(),
+        body: HelloRectangle(),
       ),
     ),
   );
